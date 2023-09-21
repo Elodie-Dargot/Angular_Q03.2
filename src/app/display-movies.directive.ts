@@ -1,11 +1,11 @@
 import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 
 @Directive({
-  selector: '[appDisplayGuests]'
+  selector: '[appDisplayMovies]'
 })
-export class DisplayGuestsDirective {
+export class DisplayMoviesDirective {
 
-  @Input() set appDisplayGuests(condition:boolean) {
+  @Input() set appDisplayMovies(condition:boolean) {
     if(condition) {
       this.vwRef.createEmbeddedView(this.tplRef);
     }else {

@@ -7,8 +7,6 @@ export class HightLightDirective{
 
   @HostBinding('class.blackBackground') isBlackBackground:boolean = false;
 
-  constructor() {}
-
   @HostListener('mouseenter') onMouseEnter(){
     this.isBlackBackground = true;
   }
