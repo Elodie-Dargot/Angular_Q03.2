@@ -3,19 +3,18 @@ import { Directive, HostListener, HostBinding } from '@angular/core';
 @Directive({
   selector: '[appHightLight]'
 })
-export class HightLightDirective {
+export class HightLightDirective{
 
-  @HostBinding('style.backgroundColor') myBackgroundColor:string | undefined;
+  @HostBinding('class.blackBackground') isBlackBackground:boolean = false;
 
   constructor() {}
 
-
-  @HostListener('mouseenter') mouseEnterEvent (eventData:Event) {
-    this.myBackgroundColor = 'yellow';
+  @HostListener('mouseenter') onMouseEnter(){
+    this.isBlackBackground = true;
   }
 
-  @HostListener('mouseleave') mouseLeaveEvent (eventData:Event) {
-    this.myBackgroundColor = 'transparent';
+  @HostListener('mouseleave') onMouseLeave(){
+    this.isBlackBackground = false;
   }
 
 }

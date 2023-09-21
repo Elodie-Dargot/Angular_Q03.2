@@ -1,7 +1,11 @@
 <h1>{{title}}</h1>
 
 <ul *appDisplayGuests="showMovies">
-    <li *ngFor="let movie of moviesList">
-        <h2 appHightLight>{{movie}}</h2>
-    </li>
+    <li appHightLight>OldBoy</li>
+    <li>Parasite</li>
+    <li>Le seigneur des anneaux</li>
+    <li>Le parrain</li>
+    <li>La ligne verte"</li>
 </ul>
+
+<button (click)="onClick()">Afficher/Masquer la liste</button>

@@ -11,4 +11,8 @@ export class AppComponent {
   showMovies: boolean = true;
 
   moviesList: string[] = ["OldBoy", "Parasite", "Le seigneur des anneaux","Le parrain","Laligne verte"];
+
+  onClick(){
+    this.showMovies = !this.showMovies
+  }
 }
